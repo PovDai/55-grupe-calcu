@@ -32,8 +32,8 @@ appDOM.innerHTML=`   <div class="kevalas">
         </div>
     </div>
     <div class="history">
-
-    </div>
+    <div class="figuros"></div>
+   
   `
 
 const [btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btnC,btn11,btn12,btn13,btn14,btn15,btn16,btn17,btn18,btn19]=appDOM.querySelectorAll('button')
@@ -44,6 +44,7 @@ const figurosDOM=document.querySelector('.figuros');
 
 
 
+
 let result=0;
 
 btn1.addEventListener('click',()=>{
@@ -51,7 +52,7 @@ btn1.addEventListener('click',()=>{
     result+=1
     pDOM.textContent=result;
     historyDOM.insertAdjacentHTML('afterbegin',`<p style="background-color:green;">Buvo prideta ${skaicius} </p>`)
-    historyDOM.insertAdjacentHTML('afterend',` <div class="figuros"></div>`)
+    historyDOM.insertAdjacentHTML('afterend',` <div class="figuros0"></div>`)
 })
 
 btn2.addEventListener('click',()=>{
@@ -109,7 +110,9 @@ btnC.addEventListener('click',()=>{
     result = 0;
     pDOM.textContent = result;
     historyDOM.innerHTML = '';
+
     historyDOM.insertAdjacentHTML('afterbegin',`<p style="background-color:green;">Eilute buvo nunulinta</p></p> `)
+    figurosDOM.innerHTML='';
     
 });
 
