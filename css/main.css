@@ -1,0 +1,130 @@
+body,
+body * {
+box-sizing: border-box;
+margin:0;
+padding:0;
+}
+body{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: black;
+}
+.ekranas{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: black;
+    width: 30rem;
+    height: 4rem;
+  border: solid 4px green;
+  margin-top: 1.5rem;
+  padding: 1rem;
+}
+.ekranas p{
+    color: red;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.kevalas{
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 35rem;
+    height: 35rem;
+    background-color:gold;
+    border-radius: 15%;
+    border: solid 4px green;
+}
+.mygtuku-kevalas{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+    flex-wrap: wrap;
+    border: solid 4px green;
+     width: 30rem;
+    height: 25rem;
+    background-color: black;
+}
+.mygtuku-kevalas button{
+    background-color: gold;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 4rem;
+    height: 4rem;
+}
+.mygtuku-kevalas .func{
+    background-color: pink;
+      font-size: 2rem;
+    font-weight: bold;
+    width: 5rem;
+    height: 5rem;
+
+}
+.history{
+   padding-top: 2rem;
+    color: gold;
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.figuros{
+    position: absolute;
+    top: 20rem;
+    right: 20rem;
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    border-radius: 50%;
+}
+.figuros-1{
+      position: absolute;
+    top: 10rem;
+    right: 20rem;
+    width: 50px;
+    height: 50px;
+    background-color: green
+
+}
+.figuros-2{
+
+        position: absolute;
+    top: 30rem;
+    right: 10rem;
+    width: 150px;
+    height: 50px;
+    background-color: pink;
+    border-radius: 60%;
+
+}
+
+.figuros-3{
+
+        position: absolute;
+    top: 10rem;
+    right: 70rem;
+    width: 50px;
+    height: 150px;
+    background-color: green;
+    border-radius: 60%;
+
+}
+@media(max-width:570px){
+    .kevalas{
+        width: 25rem;
+        height: 15rem;
+    }
+    .mygtuku-kevalas{
+        width: 15rem;
+        height:10rem ;
+    }
+
