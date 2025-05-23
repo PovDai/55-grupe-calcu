@@ -74,10 +74,11 @@ display: flex;
     height: 10rem;
     position: absolute;
     top:0;
-    left: 0;
+    left: 10rem;
 }
 
 .figuros0{
+    display: none;
     position: absolute;
     top: 20rem;
     right: 20rem;
@@ -87,6 +88,7 @@ display: flex;
     border-radius: 50%;
 }
 .figuros-1{
+    display: none;
       position: absolute;
     top: 10rem;
     right: 20rem;
@@ -96,6 +98,7 @@ display: flex;
 
 }
 .figuros-2{
+    display: none;
 
         position: absolute;
     top: 30rem;
@@ -108,7 +111,7 @@ display: flex;
 }
 
 .figuros-3{
-
+display: none;
         position: absolute;
     top: 10rem;
     right: 70rem;
@@ -121,10 +124,26 @@ display: flex;
 @media(max-width:570px){
     .kevalas{
         width: 25rem;
-        height: 15rem;
+        height: 55rem;
+         border-radius: none;
     }
     .mygtuku-kevalas{
         width: 15rem;
-        height:10rem ;
+        height:48rem ;
+        border-radius: none;
     }
-
+    .ekranas{
+    width: 25rem;
+    height: 4rem;
+ 
+    }
+.history{
+   padding-top: 2rem;
+    color: gold;
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    top:25rem;
+    left: 23.5rem;
+}
+}
