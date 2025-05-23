@@ -175,8 +175,9 @@ display: none;
     .history{
 
     position: absolute;
-    top:30rem;
+    top:0rem;
     left: 0rem;
+    bottom: 0rem;;
     padding-left: 0.5rem;
 }
 
