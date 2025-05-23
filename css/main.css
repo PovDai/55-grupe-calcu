@@ -121,7 +121,7 @@ display: none;
     border-radius: 60%;
 
 }
-@media(max-width:1000px){
+@media(max-width:800px){
     .kevalas{
         width: 20rem;
         height: 45rem;
