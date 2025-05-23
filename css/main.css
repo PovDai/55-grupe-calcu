@@ -121,7 +121,7 @@ display: none;
     border-radius: 60%;
 
 }
-@media(max-width:570px){
+@media(max-width:1000px){
     .kevalas{
         width: 25rem;
         height: 55rem;
@@ -147,7 +147,7 @@ display: none;
 }
 }
 
-@media(max-width:380px){
+@media(max-width:1000px){
 
     .ekranas{
           width: 15rem;
