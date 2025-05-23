@@ -27,13 +27,10 @@ appDOM.innerHTML=`   <div class="kevalas">
             <button type="button">-8</button>
             <button type="button">-9</button>
 
-
-            
         </div>
     </div>
     <div class="history">
     <div class="figuros"></div>
-   
   `
 
 const [btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btnC,btn11,btn12,btn13,btn14,btn15,btn16,btn17,btn18,btn19]=appDOM.querySelectorAll('button')
