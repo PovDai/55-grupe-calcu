@@ -123,13 +123,13 @@ display: none;
 }
 @media(max-width:1000px){
     .kevalas{
-        width: 25rem;
-        height: 55rem;
+        width: 20rem;
+        height: 45rem;
          border-radius: none;
     }
     .mygtuku-kevalas{
         width: 15rem;
-        height:48rem ;
+        height:42rem ;
         border-radius: none;
     }
     .ekranas{
@@ -144,6 +144,13 @@ display: none;
     position: absolute;
     top:25rem;
     left: 23.5rem;
+}
+.mygtuku-kevalas button{
+    background-color: gold;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 }
 
