@@ -135,7 +135,6 @@ display: none;
     .ekranas{
     width: 25rem;
     height: 4rem;
- 
     }
 .history{
    padding-top: 2rem;
@@ -146,4 +145,24 @@ display: none;
     top:25rem;
     left: 23.5rem;
 }
+}
+
+@media(max-width:380px){
+
+    .ekranas{
+          width: 15rem;
+    height: 4rem;
+  border: solid 4px green;
+  margin-top: 1.5rem;
+  padding: 1rem;
+    }
+.history{
+
+    position: absolute;
+    top:25rem;
+    left: 13rem;
+}
+
+    
+
 }
