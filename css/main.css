@@ -71,7 +71,7 @@ display: flex;
 .history{
    padding-top: 2rem;
     color: gold;
-    width: 12rem;
+    width: 10rem;
     height: 10rem;
     position: absolute;
     top:0;
@@ -140,7 +140,7 @@ display: none;
 .history{
    padding-top: 2rem;
     color: gold;
-    width: 10rem;
+    width: 8rem;
     height: 10rem;
     position: absolute;
     top:25rem;
