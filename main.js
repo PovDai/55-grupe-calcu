@@ -117,14 +117,14 @@ historyDOM.insertAdjacentHTML('afterbegin', `<p style="background-color:green;">
 btneg.addEventListener('click', () => {
     try {
         // Pašaliname galutinį "=" jei jis yra su = gali neveiks eval() funkcija. 
-        const expression = ekranas.replace(/=$/, ''); // replace /=$/ reiskiasi istrinti paskutini zenkla = nes neveiks eval funkcija. 
-        const calculationekranas = eval(expression);
+        const belygu = ekranas.replace(/=$/, ''); // replace /=$/ reiskiasi istrinti paskutini zenkla = nes neveiks eval funkcija. 
+        const calculationekranas = eval(belygu);
         
         pDOM.textContent = calculationekranas;
         ekranas = calculationekranas.toString();
         
         historyDOM.insertAdjacentHTML('afterbegin', 
-            `<p style="background-color:blue;">Rezultatas: ${expression} = ${calculationekranas}</p>`);
+            `<p style="background-color:blue;">Rezultatas: ${belygu} = ${calculationekranas}</p>`);
     } catch (error) {
         pDOM.textContent = 'Klaida';
         historyDOM.insertAdjacentHTML('afterbegin', 
