@@ -185,6 +185,13 @@ display: none;
     bottom: 0rem;;
     padding-left: 0.5rem;
 }
+body{
+display: flex;
+justify-content: flex-end;
+align-items: center;
+height: 100vh;
+background-color: black;
+}
 
 }
 
