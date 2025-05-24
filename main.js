@@ -37,13 +37,16 @@ const historyDOM = document.querySelector('.history');
 
 let result = '';
 
-// Bendroji funkcija skaičių mygtukams
+// Bendroji funkcija skaičių mygtukams// jeigu veikas kartojasi toks pats tiesiog prilyginam po clicko funcijai ()=> ir ji duoda { kas viduje su paciais skliaustais. }
 function paspaudus(number) {
-    result += number;
-    pDOM.textContent = result;
-    historyDOM.insertAdjacentHTML('afterbegin', `<p style="background-color:green;">Įvestas skaičius: ${number}</p>`);
+    if (result.length < 12) {
+        result += number;
+        pDOM.textContent = result;
+        historyDOM.insertAdjacentHTML('afterbegin', `<p style="background-color:green;">Įvestas skaičius: ${number}</p>`);
+    } else {
+        historyDOM.insertAdjacentHTML('afterbegin', `<p style="background-color:orange;">Pasiekta maksimali įvestis:12 </p>`);
+    }
 }
-
 // Skaičių mygtukų event listeners
 btn1.addEventListener('click', () => paspaudus('1'));
 btn2.addEventListener('click', () => paspaudus('2'));
@@ -55,6 +58,7 @@ btn7.addEventListener('click', () => paspaudus('7'));
 btn8.addEventListener('click', () => paspaudus('8'));
 btn9.addEventListener('click', () => paspaudus('9'));
 btn0.addEventListener('click', () => paspaudus('0'));
+
 
 // Funkcinių mygtukų event listeners
 btnC.addEventListener('click', () => {
@@ -110,8 +114,8 @@ historyDOM.insertAdjacentHTML('afterbegin', `<p style="background-color:green;">
 
 btneg.addEventListener('click', () => {
     try {
-        // Pašaliname galutinį "=" jei jis yra
-        const expression = result.replace(/=$/, '');
+        // Pašaliname galutinį "=" jei jis yra su = gali neveiks eval() funkcija. 
+        const expression = result.replace(/=$/, ''); // replace /=$/ reiskiasi istrinti paskutini zenkla = nes neveiks eval funkcija. 
         const calculationResult = eval(expression);
         
         pDOM.textContent = calculationResult;
