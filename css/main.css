@@ -16,6 +16,7 @@ background-color: black;
     position: relative;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
     background-color: black;
