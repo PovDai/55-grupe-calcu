@@ -22,6 +22,8 @@ appDOM.innerHTML = `
             <button class="func" type="button">+</button>
             <button class="func" type="button">/</button>
             <button class="func" type="button">*</button>
+            <button class="func" type="button">(</button>
+            <button class="func" type="button">)</button>
             <button class="func" type="button">=</button>
         </div>
     </div>
@@ -29,7 +31,7 @@ appDOM.innerHTML = `
 `;
 
 const [btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, 
-       btnC, btndot, btnminus, btnplus, btndiv, btndaug, btneq] = appDOM.querySelectorAll('button');
+       btnC, btndot, btnminus, btnplus, btndiv,btndaug,btnkairys,btndesinys,btneg] = appDOM.querySelectorAll('button');
 const pDOM = document.querySelector('.p');
 const historyDOM = document.querySelector('.history');
 
@@ -93,8 +95,20 @@ btndaug.addEventListener('click', () => {
     pDOM.textContent = result;
     historyDOM.insertAdjacentHTML('afterbegin', `<p style="background-color:green;">Pasirinktas ženklas: Daugyba</p>`);
 });
+btnkairys.addEventListener('click',()=>{
+result +='('
+pDOM.textContent= result;
+historyDOM.insertAdjacentHTML('afterbegin', `<p style="background-color:green;">Pasirinktas ženklas: ( </p>`);
 
-btneq.addEventListener('click', () => {
+})
+btndesinys.addEventListener('click',()=>{
+result+=')'
+pDOM.textContent=result;
+historyDOM.insertAdjacentHTML('afterbegin', `<p style="background-color:green;">Pasirinktas ženklas: ) </p>`);
+
+})
+
+btneg.addEventListener('click', () => {
     try {
         // Pašaliname galutinį "=" jei jis yra
         const expression = result.replace(/=$/, '');
