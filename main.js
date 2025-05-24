@@ -35,15 +35,16 @@ const [btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0,
 const pDOM = document.querySelector('.p');
 const historyDOM = document.querySelector('.history');
 
-let result = '';
+let ekranas = '';
 
 // Bendroji funkcija skaičių mygtukams// jeigu veikas kartojasi toks pats tiesiog prilyginam po clicko funcijai ()=> ir ji duoda { kas viduje su paciais skliaustais. }
 function paspaudus(number) {
-    if (result.length < 12) {
-        result += number;
-        pDOM.textContent = result;
+    if (ekranas.length < 12) {
+        ekranas += number;
+        pDOM.textContent = ekranas;
         historyDOM.insertAdjacentHTML('afterbegin', `<p style="background-color:green;">Įvestas skaičius: ${number}</p>`);
     } else {
+      
         historyDOM.insertAdjacentHTML('afterbegin', `<p style="background-color:orange;">Pasiekta maksimali įvestis:12 </p>`);
     }
 }
@@ -60,54 +61,55 @@ btn9.addEventListener('click', () => paspaudus('9'));
 btn0.addEventListener('click', () => paspaudus('0'));
 
 
+
 // Funkcinių mygtukų event listeners
 btnC.addEventListener('click', () => {
-    result = '';
+    ekranas = '';
     pDOM.textContent = '0';
     historyDOM.innerHTML = '<p style="background-color:red;">Ekranas išvalytas</p>';
 });
 
 btndot.addEventListener('click', () => {
     // Tikriname, ar jau yra taškas skaičiuje
-    if (!result.includes('.')) {
-        result += '.';
-        pDOM.textContent = result;
+    if (!ekranas.includes('.')) {
+        ekranas += '.';
+        pDOM.textContent = ekranas;
         historyDOM.insertAdjacentHTML('afterbegin', `<p style="background-color:green;">Pasirinktas ženklas: Taškas</p>`);
     }
 });
 
 btnminus.addEventListener('click', () => {
-    result += '-';
-    pDOM.textContent = result;
+    ekranas += '-';
+    pDOM.textContent = ekranas;
     historyDOM.insertAdjacentHTML('afterbegin', `<p style="background-color:green;">Pasirinktas ženklas: Minus</p>`);
 });
 
 btnplus.addEventListener('click', () => {
-    result += '+';
-    pDOM.textContent = result;
+    ekranas += '+';
+    pDOM.textContent = ekranas;
     historyDOM.insertAdjacentHTML('afterbegin', `<p style="background-color:green;">Pasirinktas ženklas: Plus</p>`);
 });
 
 btndiv.addEventListener('click', () => {
-    result += '/';
-    pDOM.textContent = result;
+    ekranas += '/';
+    pDOM.textContent = ekranas;
     historyDOM.insertAdjacentHTML('afterbegin', `<p style="background-color:green;">Pasirinktas ženklas: Dalinti</p>`);
 });
 
 btndaug.addEventListener('click', () => {
-    result += '*';
-    pDOM.textContent = result;
+    ekranas += '*';
+    pDOM.textContent = ekranas;
     historyDOM.insertAdjacentHTML('afterbegin', `<p style="background-color:green;">Pasirinktas ženklas: Daugyba</p>`);
 });
 btnkairys.addEventListener('click',()=>{
-result +='('
-pDOM.textContent= result;
+ekranas +='('
+pDOM.textContent= ekranas;
 historyDOM.insertAdjacentHTML('afterbegin', `<p style="background-color:green;">Pasirinktas ženklas: ( </p>`);
 
 })
 btndesinys.addEventListener('click',()=>{
-result+=')'
-pDOM.textContent=result;
+ekranas+=')'
+pDOM.textContent=ekranas;
 historyDOM.insertAdjacentHTML('afterbegin', `<p style="background-color:green;">Pasirinktas ženklas: ) </p>`);
 
 })
@@ -115,14 +117,14 @@ historyDOM.insertAdjacentHTML('afterbegin', `<p style="background-color:green;">
 btneg.addEventListener('click', () => {
     try {
         // Pašaliname galutinį "=" jei jis yra su = gali neveiks eval() funkcija. 
-        const expression = result.replace(/=$/, ''); // replace /=$/ reiskiasi istrinti paskutini zenkla = nes neveiks eval funkcija. 
-        const calculationResult = eval(expression);
+        const expression = ekranas.replace(/=$/, ''); // replace /=$/ reiskiasi istrinti paskutini zenkla = nes neveiks eval funkcija. 
+        const calculationekranas = eval(expression);
         
-        pDOM.textContent = calculationResult;
-        result = calculationResult.toString();
+        pDOM.textContent = calculationekranas;
+        ekranas = calculationekranas.toString();
         
         historyDOM.insertAdjacentHTML('afterbegin', 
-            `<p style="background-color:blue;">Rezultatas: ${expression} = ${calculationResult}</p>`);
+            `<p style="background-color:blue;">Rezultatas: ${expression} = ${calculationekranas}</p>`);
     } catch (error) {
         pDOM.textContent = 'Klaida';
         historyDOM.insertAdjacentHTML('afterbegin', 
